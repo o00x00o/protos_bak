@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package husky.user;
 
-option go_package = "husky/user;user";
-
+option go_package = "husky/user";
 
 message User{
   string id = 1;

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package husky.user.web;
+
+option go_package = "husky/user/web";
+
+import "google/api/httpbody.proto";
+import "google/api/annotations.proto";
+
+message LoginRequest{
+  string loginName = 1;
+  string loginPass = 2;
+}
+
+service UserService{
+  rpc login(LoginRequest)returns(google.api.HttpBody){
+    option (google.api.http) = {
+      post: "/user/login"
+      body: "*"
+    };
+  }
+}
