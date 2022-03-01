@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package husky.user;
+
+option go_package = "husky/user;user";
+
+import "google/api/httpbody.proto";
+import "google/api/annotations.proto";
+
+
